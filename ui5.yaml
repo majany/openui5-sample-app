@@ -4,14 +4,14 @@ metadata:
 type: application
 server:
   customMiddleware:
-    - name: markdownHandler
-      beforeMiddleware: serveResources
+    - name: odataToProxy
+      beforeMiddleware: connectUi5Proxy
       mountPath: /
 ---
 specVersion: '1.0'
 kind: extension
 type: server-middleware
 metadata:
-  name: markdownHandler
+  name: odataToProxy
 middleware:
-  path: lib/middleware/markdownHandler.js
+  path: lib/middleware/odataToProxy.js

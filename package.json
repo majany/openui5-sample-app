@@ -4,18 +4,21 @@
   "description": "Sample of an OpenUI5 app",
   "private": true,
   "scripts": {
-    "start": "ui5 serve",
+    "start": "export REMOTE_LOCATION='https://services.odata.org/' && ui5 serve",
     "lint": "eslint webapp",
     "karma": "karma start",
     "karma-ci": "karma start karma-ci.conf.js",
     "watch": "npm run karma",
     "test": "npm run lint && rimraf coverage && npm run karma-ci",
-    "build": "rimraf dist && ui5 build --a"
+    "build": "rimraf dist && ui5 build --a",
+    "debug": "node --nolazy --inspect-brk=9229 node_modules/.bin/ui5 serve --accept-remote-connections"
   },
   "dependencies": {
     "@openui5/sap.m": "^1.60.0",
+    "@openui5/sap.f": "^1.60.0",
     "@openui5/sap.ui.core": "^1.60.0",
     "@openui5/themelib_sap_belize": "^1.60.0",
+    "@openui5/themelib_sap_fiori_3": "^1.68.1",
     "markdown-it": "^9.0.0"
   },
   "devDependencies": {
