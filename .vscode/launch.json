@@ -10,7 +10,7 @@
             "runtimeArgs": [
                 "run-script", "debug"
             ],
-            "env": { "REMOTE_LOCATION": :"http://www.wikipedia.com" },
+            "env": { "REMOTE_LOCATION": "https://services.odata.org/" },
             "port": 9229
         }
     ]

@@ -4,14 +4,5 @@ metadata:
 type: application
 server:
   customMiddleware:
-    - name: odataToProxy
+    - name: odatatoproxy
       beforeMiddleware: connectUi5Proxy
-      mountPath: /
----
-specVersion: '1.0'
-kind: extension
-type: server-middleware
-metadata:
-  name: odataToProxy
-middleware:
-  path: lib/middleware/odataToProxy.js
